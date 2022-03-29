@@ -8,9 +8,9 @@ DATA_DIR = 'nft_data/'
 
 # for ERC 721
 def detect_cycle(edges):
-    graph = dict()  # account A to a list of next accounts, these are in the 'next' attribute as a list
+    graph = dict()  # account to a list of next accounts
     transact_time = dict() # {account address: time}, erase when backtrack
-    cycle_occurence = dict() # the number of times in cycles
+    cycle_occurence = dict() # the number of times in cycles for an address
     visited = list()
 
     # sort edges in increasing order
